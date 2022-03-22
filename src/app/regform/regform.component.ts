@@ -33,7 +33,7 @@ export class RegformComponent implements OnInit {
       panNumber: ['', [Validators.required, Validators.pattern("^[A-Za-z]{5}[0-9]{4}[A-Za-z]$")]],
     })
     this.otpForm = this.formBuilder.group({
-      otp: ['', Validators.required]
+      otp: ['', [Validators.required,Validators.minLength(4)]]
     })
   }
   get f() {

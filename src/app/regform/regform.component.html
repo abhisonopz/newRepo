@@ -105,6 +105,9 @@
                                         <div *ngIf="otpsubmitted && g.otp.errors" class="invalid-feedback">
                                             <div *ngIf="g.otp.errors.required">OTP Number is required</div>
                                         </div>
+                                        <div *ngIf="otpsubmitted && g.otp.errors" class="invalid-feedback">
+                                            <div *ngIf="g.otp.errors.minlength">Invalid OTP</div>
+                                        </div>
                                     <div class="col-6">
                                         {{display}}
                                     </div>
